@@ -1,0 +1,25 @@
+@import '../../vars.scss';
+
+.contact {
+  width: 100%;
+  height: calc(100vh - 70px - 62px);
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__input {
+    @include inputField;
+  }
+
+  &__select {
+    @include inputField;
+    color: rgba(#000, 0.6);
+    cursor: pointer;
+
+    option {
+      line-height: 120%;
+    }
+  }
+}

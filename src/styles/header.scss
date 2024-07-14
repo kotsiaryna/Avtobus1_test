@@ -1,0 +1,61 @@
+@import '../../vars.scss';
+
+.header {
+  height: 70px;
+  width: 100vw;
+  padding: 0 calc((100vw - 1160px) / 2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 1200px) {
+    padding: 0 20px;
+  }
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    height: 100px;
+    padding: 10px;
+  }
+}
+
+.book {
+  border: none;
+  background-color: inherit;
+  padding-left: 40px;
+  color: #005bfe;
+  font: 700 18px $font-family;
+  line-height: 120%;
+  background: center left / contain no-repeat url('/src/assets/icons/contact-book.png');
+}
+
+.contacts {
+  font: 700 14px $font-family;
+  height: 38px;
+  width: 276px;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 600px) {
+    width: 90%;
+  }
+
+  &__add {
+    @include button;
+    width: 178px;
+    background-color: $color-red;
+    color: white;
+    &:hover {
+      background-color: $color-red-hover;
+    }
+  }
+
+  &__groups {
+    @include button;
+    width: 82px;
+    background-color: $color-blue;
+    color: white;
+
+    &:hover {
+      background-color: $color-blue-hover;
+    }
+  }
+}

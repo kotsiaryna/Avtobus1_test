@@ -1,0 +1,71 @@
+@import '../../vars.scss';
+
+.aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 312px;
+  height: 100vh;
+  background-color: white;
+
+  @media screen and (max-width: 450px) {
+    width: 100vw;
+  }
+
+  &__header {
+    width: 100%;
+    height: 71px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__h2 {
+    font: 700 18px $font-family;
+    line-height: 120%;
+    color: #000;
+  }
+
+  &__closeBtn {
+    border: none;
+    border-radius: 6px;
+    background-color: inherit;
+    width: 24px;
+    height: 24px;
+    background: center/14px no-repeat url('./src/assets/icons/close.png');
+    &:hover {
+      cursor: pointer;
+      background-color: $color-grey;
+      transition: 0.3s;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-right: 24px;
+    height: 38px;
+
+    .buttons__add {
+      width: 96px;
+      background-color: white;
+      color: $color-blue;
+      @include button;
+      &:hover {
+        background-color: rgba($color-blue, 0.1);
+      }
+    }
+    .buttons__save {
+      width: 104px;
+      background-color: $color-blue;
+      color: white;
+      @include button;
+      &:hover {
+        background-color: $color-blue-hover;
+      }
+    }
+  }
+}
