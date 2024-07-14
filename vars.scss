@@ -1,0 +1,32 @@
+$font-family: 'Arial', sans-serif;
+$second-family: 'Igra Sans', sans-serif;
+
+$color-grey: #e5e5e5;
+$color-blue: #005bfe;
+$color-blue-hover: #0047c6;
+$color-red: #f81155;
+$color-red-hover: #d1003e;
+$color-orange: #ea3d2f;
+
+@mixin inputField {
+  height: 38px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  padding: 11px 12px;
+  background-color: rgba(0, 0, 0, 0.05);
+  font: 400 14px $font-family;
+}
+@mixin button {
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 700 14px $font-family;
+
+  &:hover {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+}

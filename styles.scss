@@ -1,0 +1,13 @@
+@import './vars.scss';
+@import './src/styles/group.scss';
+@import './src/styles/contacts.scss';
+@import './src/styles/main.scss';
+@import './src/styles/aside.scss';
+@import './src/styles/bg.scss';
+@import './src/styles/header.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
